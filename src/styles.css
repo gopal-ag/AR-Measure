@@ -9,9 +9,32 @@ ol {
 }
 
 #ARButton {
-  color: black !important;
-  width: 10em !important;
-  font-size: 4em !important;
+  color: white !important;
+  width: 8em !important;
+  font-size: 1.5em !important;
   padding: 0.5em !important;
-  left: calc(50% - 5em) !important;
+  left: calc(50% - 4em) !important;
+  background: linear-gradient(135deg, #4a4af4, #9d4edd) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 15px rgba(74, 74, 244, 0.3) !important;
+}
+
+#ARButton:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(74, 74, 244, 0.4) !important;
+}
+
+@media screen and (max-width: 480px) {
+  #ARButton {
+    width: 6em !important;
+    font-size: 1.2em !important;
+    left: calc(50% - 3em) !important;
+    top: 45em !important;
+    bottom: 50em !important  /* Added top spacing for mobile */
+  }
 }

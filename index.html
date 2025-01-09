@@ -58,6 +58,25 @@
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
+        .logo {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 1rem;
+          background: linear-gradient(135deg, var(--primary), var(--secondary));
+          border-radius: 12px;
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 15px rgba(74, 74, 244, 0.3);
+          animation: float 6s ease-in-out infinite;
+      }
+
+      .logo img {
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          object-fit: contain;
+      }
 
         .steps {
             list-style: none;
@@ -107,12 +126,24 @@
             h1 {
                 font-size: 2rem;
             }
+            .logo {
+              width: 50px;
+              height: 50px;
+          }
+
+          .logo img {
+              width: 35px;
+              height: 35px;
+          }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" style="align-items: center;">
+      <div class="logo">
+        <img src="logo.png" alt="Deradh Logo">
+    </div>
         <h1>Deradh. AR Measure</h1>
         <div class="instructions">
             <p class="start-text">
