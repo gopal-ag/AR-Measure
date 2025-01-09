@@ -5,8 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "serve": "webpack-dev-server",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server",
     "watch": "webpack --watch"
   },
   "repository": {

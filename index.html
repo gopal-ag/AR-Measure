@@ -1,23 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>WebXR Measure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deradh. AR Measure</title>
+    <style>
+        :root {
+            --primary: #4a4af4;
+            --secondary: #9d4edd;
+            --bg-gradient: linear-gradient(135deg, #1a1a2e, #16213e);
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+
+        .instructions {
+            line-height: 1.6;
+        }
+
+        .start-text {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .steps li {
+            margin-bottom: 1rem;
+            padding-left: 2.5rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .steps li:hover {
+            transform: translateX(10px);
+        }
+
+        .steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.8rem;
+            height: 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>WebXR Measure</h1>
-  <p>
-    After you pressed the <b>START AR</b> Button
-    <ol>
-      <li> Move your phone around, until you see a marker on your screen. </li>
-      <li> Move marker to first measurement point. </li>
-      <li> Tap on the screen to start measurement. </li>
-      <li> Move marker to second measurement point. </li>
-      <li> Tap on the screen to stop measurement. </li>
-      <li> The distance will appear in the center of the line connecting both measurement points. </li>
-      <li> Repeat steps 2 to 5. </li>
-    </ol>
-  </p>
-
+    <div class="container">
+        <h1>Deradh. AR Measure</h1>
+        <div class="instructions">
+            <p class="start-text">
+                After you press the <strong>START AR</strong> Button:
+            </p>
+            <ol class="steps">
+                <li>Move your phone around, until you see a marker on your screen.</li>
+                <li>Move marker to first measurement point.</li>
+                <li>Tap on the screen to start measurement.</li>
+                <li>Move marker to second measurement point.</li>
+                <li>Tap on the screen to stop measurement.</li>
+                <li>The distance will appear in the center of the line connecting both measurement points.</li>
+                <li>Repeat steps 2 to 5.</li>
+            </ol>
+        </div>
+    </div>
 </body>
 </html>
