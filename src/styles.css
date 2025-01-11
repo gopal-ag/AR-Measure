@@ -9,7 +9,6 @@ ol {
 }
 
 #ARButton {
-  position: fixed !important;
   color: white !important;
   width: 10em !important;
   font-size: 3em !important;
